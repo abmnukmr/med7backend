@@ -347,4 +347,36 @@ router.get('/add/pathalogy',function (req,res,next) {
 })
 
 
+////////<////// now get allll ......>>
+/// get all doctor list
+
+router.get('get/docter/list',function (req,res,next) {
+    doctor_search.find({ "search": "gogolio"},function (err,docs) {
+      if(err) console.log(err)
+       else {
+        res.json(docs[0])
+      }
+    })
+    //res.send("get sucessfully")
+})
+
+/// get all hospital
+
+router.get('get/docter/list',function (req,res,next) {
+    doctor_search.find({ "search": "gogolio"},function (err,docs) {
+        if(err) console.log(err)
+        else {
+            res.json(docs[0])
+        }
+    })
+    //res.send("get sucessfully")
+})
+
+
+
+
+
+
+
+
 module.exports = router;
